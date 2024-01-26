@@ -1,0 +1,12 @@
+
+{
+    "name": "shapes-library",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+      "build": "echo 'No build steps needed'"
+    },
+    "keywords": ["shapes", "library"],
+    "license": "MIT"
+  }
+  
