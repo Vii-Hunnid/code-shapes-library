@@ -1,20 +1,19 @@
 /* styles.css */
-
 .container {
     position: relative;
-    width: var(--container-width, 400px);
-    height: var(--container-height, 300px);
-    background-color: var(--container-background-color, #ecf0f1);
-    border-radius: var(--container-border-radius, 15px);
+    width: auto;
+    height: 400px;
+    background-color: #ecf0f1;
+    border-radius: 15px;
     overflow: hidden;
   }
-  
-  .rectangle {
+
+.rectangle {
     position: absolute;
     transition: transform 0.3s ease-in-out;
   }
   
-  .rectangle:hover {
-    transform: scale(var(--rectangle-hover-scale, 1.1));
-  }
+.rectangle:hover {
+    transform: scale(1.1);
+}
   
