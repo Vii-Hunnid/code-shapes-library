@@ -1,0 +1,10 @@
+const shapesLibrary = require('shapes-library');
+const container = document.getElementById('container');
+
+const rectangle1 = shapesLibrary.createRectangle(200, 100, '#3498db', 15, 50, 50, 'bottom right');
+const rectangle2 = shapesLibrary.createRectangle(150, 75, '#e74c3c', 10, 80, 80, 'top right');
+const rectangle3 = shapesLibrary.createRectangle(100, 50, '#2ecc71', 5, 120, 120, 'bottom left');
+
+container.appendChild(rectangle1);
+container.appendChild(rectangle2);
+container.appendChild(rectangle3);

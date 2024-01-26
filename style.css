@@ -1,11 +1,19 @@
 /* styles.css */
+.container {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    background-color: #ecf0f1;
+    border-radius: 15px;
+    overflow: hidden;
+  }
 
 .rectangle {
     position: absolute;
     transition: transform 0.3s ease-in-out;
   }
   
-  .rectangle:hover {
+.rectangle:hover {
     transform: scale(1.1);
-  }
+}
   
