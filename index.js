@@ -119,9 +119,3 @@ export function createCustomIsoscelesTriangle({
     return canvas;
   }  
   
-  module.exports = {
-    createCircle,
-    createRectangle,
-    createCustomIsoscelesTriangle,
-  };
-  
