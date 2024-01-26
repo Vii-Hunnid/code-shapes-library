@@ -1,69 +1,28 @@
-// // index.js
-
-// function createRectangle(width, height, backgroundColor, borderRadius, top, left, transformOrigin) {
-//     const rectangle = document.createElement('div');
-//     rectangle.className = 'rectangle';
-//     rectangle.style.width = width + 'px';
-//     rectangle.style.height = height + 'px';
-//     rectangle.style.backgroundColor = backgroundColor;
-//     rectangle.style.borderRadius = borderRadius + 'px';
-//     rectangle.style.position = 'absolute';
-//     rectangle.style.top = top + 'px';
-//     rectangle.style.left = left + 'px';
-//     rectangle.style.transformOrigin = transformOrigin;
-    
-//     rectangle.addEventListener('mouseover', () => {
-//       rectangle.style.transform = 'scale(1.1)';
-//     });
-  
-//     rectangle.addEventListener('mouseout', () => {
-//       rectangle.style.transform = 'scale(1)';
-//     });
-  
-//     return rectangle;
-//   }
-  
-//   module.exports = {
-//     createRectangle,
-//   };
-  
 // index.js
 
-function createRectangle({
-    width = 100,
-    height = 50,
-    backgroundColor = 'blue',
-    borderRadius = 10,
-    top = 0,
-    left = 0,
-    transformOrigin = 'center center',
-    hoverScale = 1.1,
-    transitionDuration = '0.3s',
-  }) {
+export function createRectangle(width, height, backgroundColor, borderRadius, top, left, transformOrigin) {
     const rectangle = document.createElement('div');
     rectangle.className = 'rectangle';
-    rectangle.style.width = width + 'px';
-    rectangle.style.height = height + 'px';
-    rectangle.style.backgroundColor = backgroundColor;
-    rectangle.style.borderRadius = borderRadius + 'px';
-    rectangle.style.position = 'absolute';
-    rectangle.style.top = top + 'px';
-    rectangle.style.left = left + 'px';
-    rectangle.style.transformOrigin = transformOrigin;
-    rectangle.style.transition = `transform ${transitionDuration} ease-in-out`;
+    rectangle.style.cssText = `
+      width: ${width}px;
+      height: ${height}px;
+      background-color: ${backgroundColor};
+      border-radius: ${borderRadius}px;
+      position: absolute;
+      top: ${top}px;
+      left: ${left}px;
+      transform-origin: ${transformOrigin};
+      transition: transform 0.3s ease-in-out;
+    `;
   
     rectangle.addEventListener('mouseover', () => {
-      rectangle.style.transform = `scale(${hoverScale})`;
+      rectangle.style.transform = 'scale(1.1)';
     });
-  
+
     rectangle.addEventListener('mouseout', () => {
       rectangle.style.transform = 'scale(1)';
     });
-  
+
     return rectangle;
   }
-  
-  module.exports = {
-    createRectangle,
-  };
-  
+
